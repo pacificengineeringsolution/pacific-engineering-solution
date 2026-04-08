@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pacific Engineering Solution | Vanuatu</title>
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+/* TYPOGRAPHY */
+h1, h2 { letter-spacing: 0.5px; }
+.section p { line-height: 1.6; }
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #000 0%, #0b3d2e 60%, #7a0f1e 100%);
+}
+.header-top {
+  padding: 30px 20px;
+  text-align: center;
+}
+.header-top h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 32px;
+}
+.gold-bar {
+  height: 18px;
+  background: #8a7424;
+}
+
+/* NAV */
+nav { background: #0f172a; }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover { color: #38bdf8; }
+
+/* HERO */
+.hero {
+  background: #1e3a8a;
+  color: white;
+  padding: 110px 20px;
+  text-align: center;
+}
+.hero h2 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+.hero p {
+  color: #e6f6ff;
+  font-size: 18px;
+}
+.btn {
+  background: #38bdf8;
+  color: #000;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.section.reverse { flex-direction: row-reverse; }
+.section img {
+  width: 300px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* SERVICE CARDS */
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+.card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* TRIANGLE IMAGES */
+.triangle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.triangle img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+.triangle .top {
+  grid-column: 1 / 3;
+  max-width: 70%;
+  margin: auto;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 520px;
+}
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+.modal-content button {
+  width: 100%;
+  padding: 12px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.close {
+  text-align: right;
+  cursor: pointer;
+  font-weight: bold;
+}
+.success {
+  display: none;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+/* WHATSAPP */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  font-size: 26px;
+  padding: 14px 18px;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  text-decoration: none;
+  z-index: 2000;
+}
+.whatsapp-btn:hover { background: #1ebe5d; }
+
+/* MOBILE */
+@media (max-width: 600px) {
+  nav ul { flex-direction: column; gap: 14px; }
+  .hero { padding: 80px 20px; }
+  .hero h2 { font-size: 32px; }
+  .section { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-top">
+    <h1>Pacific Engineering Solution in Vanuatu</h1>
+  </div>
+  <div class="gold-bar"></div>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#mechanical">Mechanical</a></li>
+      <li><a href="#automotive">Automotive</a></li>
+      <li><a href="#civil">Civil Steel</a></li>
+      <li><a href="#technology">Technology</a></li>
+      <li><a onclick="openModal()">Request a Quote</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <h2>Engineering Pride for the Pacific in Vanuatu</h2>
+  <p>Reliable engineering, automotive, civil steel & technology services</p>
+  <button class="btn" onclick="openModal()">Request a Quote</button>
+</section>
+
+<section class="section" id="mechanical">
+  <div>
+    <h2>Mechanical Fabrication</h2>
+    <div class="service-list">
+      <div class="card">Security grills & gates</div>
+      <div class="card">Tank stands</div>
+      <div class="card">Drying racks</div>
+      <div class="card">Custom welding</div>
+    </div>
+  </div>
+  <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1000&q=60" alt="Mechanical Fabrication">
+</section>
+
+<section class="section reverse" id="automotive">
+  <div>
+    <h2>Automotive Services</h2>
+    <div class="service-list">
+      <div class="card">Oil servicing</div>
+      <div class="card">Brake repairs</div>
+      <div class="card">Suspension repairs</div>
+      <div class="card">Battery replacement</div>
+    </div>
+  </div>
+  <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=60" alt="Automotive">
+</section>
+
+<section class="section" id="civil">
+  <div>
+    <h2>Civil Steel Products</h2>
+    <div class="service-list">
+      <div class="card">Handrails</div>
+      <div class="card">Stair rails</div>
+      <div class="card">Fencing panels</div>
+      <div class="card">Drain covers</div>
+    </div>
+  </div>
+  <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=60" alt="Civil Steel">
+</section>
+
+<section class="section" id="technology">
+  <div>
+    <h2>Technology & Protection</h2>
+    <p><strong>Broadband:</strong> Starlink, VSAT, wireless & cabling</p>
+    <p><strong>Protection:</strong> Grounding & lightning systems</p>
+    <p><strong>Security:</strong> CCTV, access control & alarms</p>
+  </div>
+  <div class="triangle">
+    <img class="top" src="cctv-access-control.png" alt="CCTV">
+    <img src="starLink_.jpg" alt="Starlink">
+    <img src="Solar.jpg" alt="Solar">
+  </div>
+</section>
+
+<section class="section">
+  <div>
+    <h2>Our Location</h2>
+    <p>Port Vila, Efate – Serving all of Vanuatu</p>
+  </div>
+  <iframe
+    src="https://www.google.com/maps?q=Port+Vila+Vanuatu&output=embed"
+    width="100%"
+    height="250"
+    style="border:0;"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>Pacific Engineering Solution – Vanuatu</strong></p>
+  <p>Engineering • Automotive • Civil Steel • Technology</p>
+  <p>📧 engineeringsolutionpacific@gmail.com | 📞 +678 7777003</p>
+  <p>📍 Port Vila – Serving Efate & Outer Islands</p>
+  <p>© 2026 All rights reserved</p>
+</footer>
+
+<a class="whatsapp-btn" href="https://wa.me/6787777003" target="_blank">💬</a>
+
+<div class="modal" id="quoteModal">
+  <div class="modal-content">
+    <div class="close" onclick="closeModal()">✖</div>
+    <h2>Request a Quote</h2>
+    <form id="quoteForm" onsubmit="showSuccess(event)">
+      <input placeholder="Your Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="4" placeholder="Your request" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div class="success" id="successMsg">Thank you! We will contact you shortly.</div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('quoteModal').classList.add('show');
+}
+function closeModal() {
+  document.getElementById('quoteModal').classList.remove('show');
+}
+function showSuccess(e) {
+  e.preventDefault();
+  document.getElementById('quoteForm').style.display = 'none';
+  document.getElementById('successMsg').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
